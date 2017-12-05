@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <el-button @click.native="startHacking">Yes!</el-button>
+    <brandList></brandList>
   </div>
 </template>
 
 <script>
+import brandList from './brand/brand_list.vue';
 export default {
   data () {
     return {
@@ -22,7 +21,12 @@ export default {
         duration: 6000
       })
     }
+  },
+
+  components:{
+    brandList
   }
+
 }
 </script>
 
