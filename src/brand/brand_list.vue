@@ -2,9 +2,9 @@
 
     <div>  
     <el-table :data="data" border>
-        <el-table-column label="表1">
-            <el-table-column label="name" prop="brandName"></el-table-column>
-            <el-table-column label="letter" prop="letter"></el-table-column>
+        <el-table-column label="carBrand">
+            <el-table-column label="carBrandName" prop="carBrandName"></el-table-column>
+            <el-table-column label="stateName" prop="stateName"></el-table-column>
         </el-table-column>
     </el-table>
     <el-input v-model="brandName"></el-input>
@@ -29,7 +29,7 @@ export default {
 
     methods:{
         query(){
-            axios.get('/api/ap/brand/page',{
+            axios.get('/api/ap/car/brand/list',{
                 params:{
                     brandName: this.brandName
                 }
