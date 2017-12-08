@@ -58,7 +58,7 @@ module.exports = (options = {}) => ({
     port: 8010, //这是页面访问地址
     proxy: {
       '/api/': {
-        target: 'http://192.168.100.232:8080/api',	//这是后台访问地址
+        target: 'http://192.168.100.234:8082/api',	//这是后台访问地址
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
